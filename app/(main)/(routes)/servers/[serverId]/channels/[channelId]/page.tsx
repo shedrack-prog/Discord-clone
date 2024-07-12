@@ -35,14 +35,13 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
     return redirect('/');
   }
   return (
-    <div className="bg-white dark:bg-[#313338] flex flex-col h-full">
+    <div className="bg-white dark:bg-[#313338]  flex flex-col h-[100]">
       <ChatHeader
         type="channel "
         serverId={channel.serverId}
         name={channel.name}
       />
-
-      <div className="flex-1 h-full">Future Messages</div>
+      <div className=" flex-1">Future Messages</div>
       <ChatInput
         name={channel.name}
         type="channel"
