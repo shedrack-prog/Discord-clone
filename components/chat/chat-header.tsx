@@ -6,16 +6,16 @@ import { SocketIndicator } from '@/components/socket-indicator';
 interface ChatHeaderProps {
   serverId: string;
   name: string;
-  type: 'channel ' | 'conversation';
+  type: 'channel' | 'conversation';
   imageUrl?: string;
 }
 
 const ChatHeader = ({ serverId, name, type, imageUrl }: ChatHeaderProps) => {
   return (
-    <div className="text-md font-semibold px-3 flex items-center h-12 border-neutral-200 dark:border-neutral-800 border-b-2 ">
+    <div className="fixed top-0 left-0 z-50 dark:bg-[#313338]   md:left-[320px] right-0 text-md font-semibold px-3 flex items-center h-12 border-neutral-200 dark:border-neutral-800 border-b-2">
       <MobileToggle serverId={serverId} />
 
-      {type === 'channel ' && (
+      {type === 'channel' && (
         <Hash className="h-4 w-4 mr-2 text-zinc-500 dark:text-zinc-400" />
       )}
 

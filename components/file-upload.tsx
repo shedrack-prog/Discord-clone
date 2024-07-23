@@ -28,7 +28,7 @@ export const FileUploader = ({
           alt="Server Image"
           width={150}
           height={150}
-          className="rounded-full w-20 h-20"
+          className="rounded-full w-20 h-20 object-cover"
         />
         <Button
           onClick={() => onChange('')}

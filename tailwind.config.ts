@@ -1,4 +1,4 @@
-const { withUt } = require('uploadthing/tw');
+// const { withUt } = require('uploadthing/tw');
 
 import type { Config } from 'tailwindcss';
 
