@@ -220,6 +220,7 @@ const ChatItem = ({
                 />
 
                 <Button
+                  // onClick={()=> onSubmit()}
                   disabled={isLoading}
                   className=""
                   size="sm"
@@ -252,12 +253,12 @@ const ChatItem = ({
           )}
           <ActionTooltip label="Delete">
             <Trash
-              onClick={() =>
+              onClick={() => {
                 onOpen('deleteMessage', {
                   apiUrl: `${socketUrl}/${id}`,
                   query: socketQuery,
-                })
-              }
+                });
+              }}
               className="cursor-pointer w-4 h-4 text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-300 transition "
             />
           </ActionTooltip>

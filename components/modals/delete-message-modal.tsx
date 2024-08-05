@@ -22,15 +22,15 @@ export const DeleteMessageModal = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleLeaveServer = async () => {
+  const handDeleteMessage = async () => {
     setLoading(true);
     try {
-      const url = qs.stringifyUrl({
+      const backendUrl = qs.stringifyUrl({
         url: apiUrl || '',
         query,
       });
 
-      await axios.delete(url);
+      await axios.delete(backendUrl);
       onClose();
     } catch (error) {
       console.log(error);
@@ -59,7 +59,7 @@ export const DeleteMessageModal = () => {
             <Button
               disabled={loading}
               variant="primary"
-              onClick={handleLeaveServer}
+              onClick={handDeleteMessage}
             >
               Confirm
             </Button>
